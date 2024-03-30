@@ -31,7 +31,7 @@
         return "🟦 🥳";
       }
     }
-    
+
 
 
 
@@ -42,8 +42,22 @@
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
+      let newString = text.split(" ")
+      for (let i = 0; i <= forbidden.length; i++) {
+        console.log(forbidden[i])
+        for (let j = 0; j <= newString.length; j++) {
+          if (forbidden[i] === newString[j]) {
+            let generatedString = newString.replace("the","xxx")
 
+          }
+          else {
+            return text
+          }
+        }
+      }
     }
+
+    
 
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
