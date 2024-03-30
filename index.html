@@ -6,13 +6,44 @@
   <script id="challenge">
     // 👉 CHALLENGE 1
     function profileActivation(profile, reason) {
-
+      if (profile.active === false && profile.reason) {
+        profile.active = true;
+        delete profile.reason;
+      } else if (profile.active === true && reason) {
+        profile.active = false;
+        profile.reason = reason;
+      } else if (profile.active === true && !profile.reason) {
+        return "confirm status manually";
+      }
+      return profile;
     }
 
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
+      // for (let i=0;i<grid.length;i++) {
+      //   let xCordinate =grid.length
+      //   console.log(xCordinate)
+      //   for (let j=0;j<grid.length;j++) {
+      //     let yCordinate = grid.length
+      //     if(typeof x==="number"&&typeof y==="number")
+      //     {console.log("i M here")
+      //       if (grid.length[i]===x&&grid.length[j]===y) {
+      //       return "🟥 💀"
+      //     }
+      //     else
+      //     {
+      //       return "invalid coordinates"
+      //     }
+      //     }
+        
+      //   }
 
-    }
+      let xIndex = typeof grid[0]
+      console.log(xIndex)
+      }
+
+
+    
 
     // 👉 CHALLENGE 3
     function booleanize(obj) {
