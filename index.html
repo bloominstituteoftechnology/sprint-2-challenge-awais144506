@@ -37,6 +37,7 @@
 
     // 👉 CHALLENGE 3
     function booleanize(obj) {
+      let keys = Object.keys(obj)
 
     }
 
@@ -46,6 +47,7 @@
       for (let i = 0; i < newString.length; i++) {
         if (forbidden.includes(newString[i])) {
           let characters = newString[i].split('');
+
           for (let k = 0; k < characters.length; k++) {
             characters[k] = 'x';
           }
@@ -58,7 +60,13 @@
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
 
+
+      let stringGenerated = `(${num.slice(0, 3)}) ${num.slice(3, 6)}-${num.slice(6, 10)}`
+
+      return stringGenerated
+
     }
+
 
     // 👉 CHALLENGE 6 (bonus, NOT graded)
     function diceRolls() {
